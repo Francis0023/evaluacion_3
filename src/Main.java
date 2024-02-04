@@ -6,9 +6,9 @@ public class Main {
     static JFrame pantalla1 =new JFrame("Pantalla 1");
     public static void main(String[] args) {
         pantalla1.setContentPane(new form1().panel1);
-        pantalla1.setSize(800,550);
-        pantalla1.pack();
-        pantalla1.setVisible(true);
         pantalla1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pantalla1.pack();
+        pantalla1.setSize(850,420);
+        pantalla1.setVisible(true);
     }
 }

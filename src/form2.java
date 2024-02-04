@@ -5,102 +5,72 @@ import java.awt.event.ActionListener;
 public class form2 {
     private JRadioButton verSaldoRadioButton;
     private JRadioButton retiroRadioButton;
-    private JRadioButton depositóRadioButton;
+    private JRadioButton depositoRadioButton;
     private JRadioButton salirRadioButton;
     JPanel panel2;
-
-
-
-
-// CONTINUARButton.addActionListener(new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//
-//// Cerrar la ventana actual (Pantalla1)
-//            Main.frame.dispose();
-////opcion, regresar(cierra ventana)
-//            form3.frame.dispose();
-//
-//// Ventana 2 (Pantalla2)
-////establece el contenido de la ventana
-//            frame.setContentPane(new form3().pant4);
-////establece la operacion por defecto cuando la ventana se cierra
-//            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-////empaqueta los componentes
-//            frame.pack();
-//            frame.setSize(850,420);
-//            frame.setVisible(true);
-//        }
-//    });
+    static JFrame pantalla2 = new JFrame("Trancsacción a realizar:");
+    static JFrame pantalla3 = new JFrame("Saldo");
+    static JFrame pantalla4 = new JFrame("Retiro");
+    static JFrame pantalla5 = new JFrame("Depósito");
 
     public form2() {
         verSaldoRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Cerrar la pantalla de ingreso
-                form1.pantalla2.dispose();
+                // Cerrar la pantalla actual
+                form2.pantalla2.dispose();
 
-                // Asegúrate de tener acceso a la instancia de Main.pantalla1
-                // Ventana 2 (Pantalla2)
-                //establece el contenido de la ventana
-                JFrame pantalla3 =new JFrame("Saldo");
+                // Ventana 3 (Pantalla3)
+                // Establecer el contenido de la ventana
                 pantalla3.setContentPane(new form3().panel3);
-                //establece la operacion por defecto cuando la ventana se cierra
+                // Establecer la operación por defecto cuando la ventana se cierra
                 pantalla3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                //empaqueta los componentes
+                // Empaquetar los componentes
                 pantalla3.pack();
-                pantalla3.setSize(850,420);
+                pantalla3.setSize(850, 420);
                 pantalla3.setVisible(true);
-
-
             }
         });
         retiroRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Cerrar la pantalla de ingreso
-                form1.pantalla2.dispose();
+                // Cerrar la pantalla actual
+                form2.pantalla2.dispose();
 
-
-                // Asegúrate de tener acceso a la instancia de Main.pantalla1
-                // Ventana 2 (Pantalla2)
-                //establece el contenido de la ventana
-                JFrame pantalla4 =new JFrame("Retiro");
+                // Ventana 4 (Pantalla4)
+                // Establecer el contenido de la ventana
                 pantalla4.setContentPane(new form4().panel4);
-                //establece la operacion por defecto cuando la ventana se cierra
+                // Establecer la operación por defecto cuando la ventana se cierra
                 pantalla4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                //empaqueta los componentes
+                // Empaquetar los componentes
                 pantalla4.pack();
-                pantalla4.setSize(850,420);
+                pantalla4.setSize(850, 420);
                 pantalla4.setVisible(true);
-
             }
         });
-        depositóRadioButton.addActionListener(new ActionListener() {
+        depositoRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Cerrar la pantalla de ingreso
-                form1.pantalla2.dispose();
+                // Cerrar la pantalla actual
+                form2.pantalla2.dispose();
 
-                // Asegúrate de tener acceso a la instancia de Main.pantalla1
-                // Ventana 2 (Pantalla2)
-                //establece el contenido de la ventana
-
-                JFrame pantalla5 =new JFrame("Depósito");
+                // Ventana 5 (Pantalla5)
+                // Establecer el contenido de la ventana
                 pantalla5.setContentPane(new form5().panel5);
-                //establece la operacion por defecto cuando la ventana se cierra
+                // Establecer la operación por defecto cuando la ventana se cierra
                 pantalla5.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                //empaqueta los componentes
+                // Empaquetar los componentes
                 pantalla5.pack();
-                pantalla5.setSize(850,420);
+                pantalla5.setSize(850, 420);
                 pantalla5.setVisible(true);
-
             }
         });
         salirRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                // Cerrar la pantalla actual
+                form2.pantalla2.dispose();
+                // Puedes agregar aquí código adicional si es necesario
             }
         });
     }
